@@ -1,0 +1,33 @@
+.section-pictures {
+
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+
+    display: flex;
+    justify-content: space-around;
+
+
+
+  &__photi {
+    width: 20%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 4px;
+
+    @media (max-width: $bp-900) {
+        width: 20%;
+    }
+  }
+
+  margin: 10rem 0;
+
+
+
+//     &__photi {
+//         width: 75%;
+//         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+//         border-radius: 4px;
+//         margin: 3rem;
+//     }
+//   }
+
+}

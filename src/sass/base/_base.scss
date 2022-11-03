@@ -1,0 +1,76 @@
+
+$color-block-link-bg: #f4f4f4;
+$color-block-link-color: #3a3A3A;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+//     @media only screen and (max-width: 160em) { // width < 1200?
+//         font-size: 100%; //1 rem = 9px, 9/16 = 50%
+//         //background-color: rgb(115, 121, 121);
+//     }
+
+//     @media only screen and (max-width: 75em) { // width < 1200?
+//         font-size: 90%; //1 rem = 9px, 9/16 = 50%
+//         //background-color: aqua;
+//     }
+
+//     @media only screen and (max-width: 56em) { // width < 900?
+//         font-size: 95%; //1 rem = 8px, 8/16 = 50%
+//         //background-color: burlywood;
+//     }
+    
+//     @media only screen and (max-width: 37em) {
+//         font-size: 95%; //1rem = 12, 12/16
+//         //background-color: darkolivegreen;
+//     }
+
+}
+
+body {
+    box-sizing: border-box;
+    
+
+    font-weight: 400;
+    line-height: 1.7;
+    font-family: 'Noticia', sans-serif;
+}
+
+// Changing how selected text looks on the site
+::selection {
+    background-color: $color-block-link-bg;
+    color: $color-block-link-color;
+}
+
+
+// MEDIA QUERY MANAGER
+// 0 - 600px:      37.5em      Phone
+// 600 - 900px:    56.25em     Tablet portrait
+// 900 - 1200px:   75em        Tablet landscape
+// 1800px + :      112.5em     Big desktop
+
+
+// box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+.container {
+    display: grid;
+    grid-template-columns: 2rem repeat(6, 1fr) 2rem;
+    grid-template-rows: repeat(6, minmax(min-content max-content));
+}
+
+// Banner 
+// Feature 
+// Map
+// Listing 
+// Footer 
+// linikblock 
