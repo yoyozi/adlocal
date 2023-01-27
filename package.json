@@ -1,20 +1,38 @@
 {
-    "name": "streetcraft",
-    "version": "1.0.3",
-    "description": "For street sellers",
-    "default": "index.html",
-    "scripts": {
-        "start": "parcel index.html",
-        "build": "parcel build index.html --dist-dir ./dist"
-    },
-    "author": "Jonas Schedtmann",
-    "license": "ISC",
-    "devDependencies": {
-        "@parcel/transformer-sass": "^2.7.0",
-        "parcel": "^2.7.0",
-        "sass": "^1.55.0"
-    },
-    "dependencies": {
-        "core-js": "^3.25.5"
-    }
+  "name": "adlocal",
+  "version": "1.0.0",
+  "description": "Express, mongo, adlocal",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoyozi/adlocal.git"
+  },
+  "author": "Craig Leppan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoyozi/adlocal/issues"
+  },
+  "homepage": "https://github.com/yoyozi/adlocal#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0",
+    "morgan": "^1.10.0",
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.1",
+    "prettier": "^2.8.3"
+  }
 }

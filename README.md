@@ -7,10 +7,10 @@
 
 This site has three main sections:
 
-Map: using leaflet with markers and geojason it depicts where bussinesses are situated.
+Map: using leaflet with markers and geojason it depicts where bussinesses are situated. UI turn on and off, off by default
 
 
-Featured area: chooses two random companies to show based on a hit, will be changed when server based env implemented to be per day and not on hit.
+Featured area: chooses two random companies to show based on a hit, will be changed when server based env implemented to be per day and not on hit. Turn on and off in UI and on by default
 
 
 Listing area: this is the main area where companies are listed
@@ -25,19 +25,22 @@ To build node requirements
 npm install
 ```
 
-Change image hrefs so the point to other.
+Change image hrefs so the point to others in html.
 
 Then run:
-
-```
-npm run start
-```
 
 To build just run:
 
 
 ```
 npm run build
+```
+
+To start 
+
+
+```
+npm run start
 ```
 
 Enjoy
