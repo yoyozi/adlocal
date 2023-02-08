@@ -1,17 +1,18 @@
-const express = require("express");
+const express = require('express');
+const authController = require('../controllers/authController');
 
 const router = express.Router();
-const companyController = require("../controllers/companyController");
+const companyController = require('../controllers/companyController');
 
 router
-  .route("/")
+  .route('/')
   .get(companyController.getAllCompanies)
-  .post(companyController.createCompany);
+  .post(authController.protect, authController.restrictTo('admin'), companyController.createCompany);
 
 router
-  .route("/:id")
+  .route('/:id')
   .get(companyController.getCompany)
-  .delete(companyController.deleteCompany)
-  .patch(companyController.updateCompany);
+  .delete(authController.protect, authController.restrictTo('admin'), companyController.deleteCompany)
+  .patch(authController.protect, authController.restrictTo('admin'), companyController.updateCompany);
 
 module.exports = router;

@@ -7,26 +7,19 @@ const companySchema = new mongoose.Schema({
     required: [true, 'Must have a name'],
     unique: true,
     trim: true,
-    maxlength: [40, 'Must have less than 40 characters'],
+    maxlength: [50, 'Must have less than 40 characters'],
     minlength: [6, 'Must have more than 6 characters'],
     // validate: [validator.isAlpha, 'Tour name must only contain characters']
+  },
+  contact: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'User',
+    required: [true, 'Company must be managed by a user']
   },
   slug: String,
   address: {
     type: String,
     required: [true, 'Must have an address'],
-  },
-  contact: {
-    type: String,
-    required: [true, 'Must have one contact'],
-  },
-  mobile: {
-    type: String,
-    required: [true, 'Must have a contacts number'],
-  },
-  email: {
-    type: String,
-    trim: true,
   },
   website: {
     type: String,
@@ -34,8 +27,8 @@ const companySchema = new mongoose.Schema({
   shortDescription: {
     type: String,
     trim: true,
-    maxlength: [40, 'Must have less than 40 characters'],
-    minlength: [10, 'Mmust have more than 10 characters'],
+    maxlength: [40, 'ShortDescription must have less than 40 characters'],
+    minlength: [10, 'ShortDescription must have more than 10 characters'],
     default: 'Fantastic Pets',
   },
   longDescription: {
@@ -61,7 +54,20 @@ const companySchema = new mongoose.Schema({
     default: Date.now(),
     select: false,
   },
+  location: {
+    type: {
+      type: String,
+      default: 'Point',
+      enum: ['Point'],
+    },
+    coordinates: {
+      type: [Number],
+      marker: String,
+    },
+  },
 });
+
+
 
 // Document middleware in mongoose allows us to get pre and post hooks
 // The this is the document  and pre save create a slug of the name of company
@@ -71,6 +77,15 @@ companySchema.pre('save', function (next) {
 
   // Create a slug of the name of company (need an entry in the model!)
   this.slug = slugify(this.name, { lower: true });
+  next();
+});
+
+// Populate all queries that use find with the contacts details except for the select minus ones
+companySchema.pre(/^find/, function(next) {
+  this.populate({
+    path: 'contact',
+    select: '-__v -passwordChangedAt'
+  })
   next();
 });
 

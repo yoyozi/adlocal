@@ -1,41 +1,60 @@
 [
-    {
-        "id":1,
-        "name":"Dirty Doggie",
-        "address":"25 Thornton road",
-        "contact":"Tanya",
-        "mobile":"0824526470",
-        "email":"tanyac1976@gmail.com",
-        "website":"https://www.facebook.com/DirtyDoggie",
-        "shortDescription":"Dog Parlour",
-        "longDescription":"Dirty Doggie takes care of your pet as if it was our own. The greatest of care is taken to ensure your dog is well groomed and looked after",
-        "logo":"dirtydoggie-logo.jpg",
-        "location": {
-            "coordinates": [
-                27.98753153791114,
-                -26.1787062144584
-            ]
-        }
-    },
-    {
-        "id":2,
-        "name": "SKK Installations",
-        "address": "26 Thornton road",
-        "contact": "Richenda Holland",
-        "mobile": "0114700078",
-        "email":" info@skkinstallations.co.za",
-        "website":" http://skkinstallations.co.za",
-        "shortDescription": "DRIVEN BY PASSION",
-        "longDescription": "Tailored construction solution focused in interior finishing, space planning, project management and acoustic installation.",
-        "logo":"skkinstallations-logo.jpg",
-        "location": {
-            "coordinates": [
-                27.98775160864099,
-                -26.178814837428156
-            ]
-        }
-},
-{
+  
+  {
+    "id":1,
+    "name":"Dirty Doggie",
+    "address":"25 Thornton road",
+    "contact":"Tanya",
+    "mobile":"0824526470",
+    "email":"tanyac1976@gmail.com",
+    "website":"https://www.facebook.com/DirtyDoggie",
+    "shortDescription":"Dog Parlour",
+    "longDescription":"Dirty Doggie takes care of your pet as if it was our own. The greatest of care is taken to ensure your dog is well groomed and looked after",
+    "logo":"dirtydoggie-logo.jpg",
+    "location": {
+        "coordinates": [
+            27.98753153791114,
+            -26.1787062144584
+        ]
+    }
+  },
+  {
+    "id":1,
+    "name":"Dirty Doggie",
+    "address":"25 Thornton road",
+    "contact":"Tanya",
+    "mobile":"0824526470",
+    "email":"tanyac1976@gmail.com",
+    "website":"https://www.facebook.com/DirtyDoggie",
+    "shortDescription":"Dog Parlour",
+    "longDescription":"Dirty Doggie takes care of your pet as if it was our own. The greatest of care is taken to ensure your dog is well groomed and looked after",
+    "logo":"dirtydoggie-logo.jpg",
+    "location": {
+        "coordinates": [
+            27.98753153791114,
+            -26.1787062144584
+        ]
+    }
+  },
+  {
+    "id":2,
+    "name": "SKK Installations",
+    "address": "26 Thornton road",
+    "contact": "Richenda Holland",
+    "mobile": "0114700078",
+    "email":" info@skkinstallations.co.za",
+    "website":" http://skkinstallations.co.za",
+    "shortDescription": "DRIVEN BY PASSION",
+    "longDescription": "Tailored construction solution focused in interior finishing, space planning, project management and acoustic installation.",
+    "logo":"skkinstallations-logo.jpg",
+    "location": {
+        "coordinates": [
+            27.98775160864099,
+            -26.178814837428156
+        ]
+    }
+  },
+  {
     "id":3,
     "name": "Hairshades",
     "address": "50 Thornton road",
@@ -52,8 +71,8 @@
         -26.178063924097927
       ]
     }
-},
-{
+  },
+  {
     "id":4,
     "name": "Kijans laundry and tailoring",
     "address": "51 Thornton road",

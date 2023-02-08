@@ -1,0 +1,251 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    meta(name='description', content='Local advertising Westdene Triomph, local goods and services')
+    meta(name='keywords', content='Westdene Triomph Sophiatown, local advertising')
+    meta(name='author', content='Craig Leppan')
+    link(rel='shortcut icon', type='image/png', href='./src/img/favicon.ico')
+    link(rel='stylesheet', href='https://unpkg.com/leaflet@1.9.1/dist/leaflet.css', integrity='sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=', crossorigin='')
+    script(src='https://unpkg.com/leaflet@1.9.1/dist/leaflet.js', integrity='sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=', crossorigin='')
+    // EasyButton
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css')
+    script(src='https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js')
+    // FA for leaflet easy button
+    link(href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', rel='stylesheet')
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&display=swap', rel='stylesheet')
+    link(rel='shortcut icon', type='image/png', href='./src/img/favicon.ico')
+    link(rel='stylesheet', href='./src/sass/main.scss')
+    script(type='module', src='./src/js/index.js')
+    title ADLOCAL
+  |  
+  body
+    main.container
+      section.banner
+        img.banner__logo(src='./src/img/adlocal-logo.png', alt='Advertize locally')
+        .tooltip.banner__feature
+          .banner__f.active
+            img.banner__marker(src='./src/svg/star-full.svg', alt='Feature-on-off')
+          p.tip_f.tip ADD/REMOVE FEATURE
+        .tooltip.banner__map
+          .banner__m.active
+            img.banner__marker(src='./src/svg/map-on.svg', alt='Map-on-off')
+          p.tip_m.tip ADD/REMOVE MAP
+        .tooltip.banner__speaker
+          .banner__sp
+            img.banner__marker(src='./src/svg/mega.svg', alt='Notices')
+          p.tip_sp.tip IMPORTANT NOTICES!
+        .notice-wrapper
+          .notice
+            .notice-close X
+            .notice-content
+              h1.heading-secondary IMPORTANT NOTICES!
+              h3.heading-secondary--sub For the area of Westdene and Triomph
+              p.paragraph
+                strong Security
+                | : Coming soon to the site
+              p.paragraph
+                strong Public Notices
+                | : Coming soon to the site
+              p.paragraph
+                strong Event Notices
+                | : Coming soon to the site
+        // <strong class="banner__other ">S</strong>
+        strong.banner__visitstoday Westdene/Triomph
+        
+      section.feature
+        .feature__one
+          h2.feature--cardheader Tannie Mossies Melk Tert
+          img.feature--cardimg(src='./src/img/mtart.jpeg', alt='')
+          p.feature--cardtext
+            | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam iure cupiditate ipsam consequatur quam id?
+        .feature__two
+          h2.feature--cardheader Sandiles hot chips
+          img.feature--cardimg(src='./src/img/hotchips.jpg', alt='Hot chips')
+          p.feature--cardtext
+            | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam iure cupiditate ipsam cam id?
+      section.map
+        #map
+      section.listing
+        .listing__paginator  &Larr; [ A B C D E ] &Rarr;
+        .box
+          img.box__right--img(src='https://zenergy.site/storage/linkblock/4that-logo-300-2x.png', alt='')
+          .box__ad
+            h3.box__left--company Pupps: Dog parlour
+            p.box__left--location 33 Stafford street
+            p.box__left--text Pet freindly workers, come to your house
+        .box
+          img.box__right--img(src='https://zenergy.site/storage/linkblock/adlocal-logo-150-1x.png', alt='')
+          .box__ad
+            h3.box__left--company Pupps: Dog parlour
+            p.box__left--location 33 Stafford street
+            p.box__left--text
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quis porro repellateserunt reiodit!
+        .box
+          img.box__right--img(src='https://zenergy.site/storage/linkblock/mic-logo-150-1x.png', alt='')
+          .box__ad
+            h3.box__left--company Pupps: Dog parlour
+            p.box__left--location 33 Stafford street
+            p.box__left--text
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. entore quo ipsam explicabo dicta ratione.
+        .box
+          img.box__right--img(src='https://zenergy.site/storage/linkblock/ao-logo-300-2x.png', alt='')
+          .box__ad
+            h3.box__left--company Pupps: Dog parlour
+            p.box__left--location 33 Stafford street
+            p.box__left--text Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum rem sit.
+        .box
+          img.box__right--img(src='https://zenergy.site/storage/linkblock/netsec-logo-300-2x.png', alt='')
+          .box__ad
+            h3.box__left--company Pupps: Dog parlour
+            p.box__left--location 33 Stafford street
+            p.box__left--text Pet freindly workers, come to your house
+        .box
+          img.box__right--img(src='https://zenergy.site/storage/linkblock/mic-logo-150-1x.png', alt='')
+          .box__ad
+            h3.box__left--company Pupps: Dog parlour
+            p.box__left--location 33 Stafford street
+            p.box__left--text
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quis porro repellat odit!
+        .box
+          img.box__right--img(src='https://zenergy.site/storage/linkblock/mic-logo-150-1x.png', alt='')
+          .box__ad
+            h3.box__left--company Pupps: Dog parlour
+            p.box__left--location 33 Stafford street
+            p.box__left--text
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inre quo ipsam explicabo dicta ratione.
+        .box
+          img.box__right--img(src='https://zenergy.site/storage/linkblock/mic-logo-150-1x.png', alt='')
+          .box__ad
+            h3.box__left--company Pupps: Dog parlour
+            p.box__left--location 33 Stafford street
+            p.box__left--text
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum rem nostrum reiciendis sit.
+      section.pop
+        .popup-wrapper
+          .popup
+            .popup-close X
+            .popup-content
+              h2 Adlocal co za!
+              p.paragraph Local is lekker
+              a(href='#') View company
+      footer.footer
+        .footer__box
+          .footer__box--left
+            .footer__items--left
+              h2.footer__header Local products and services.
+              p.footer__text
+                | Local advertising, local to suburbs: comming soon. With the rising costs of fuel and services better to know what is found right on your doorstep!
+              |  
+              p.footer__text
+                | We as a comunity need to develop our knowledge about our community so as to ensure we know who is in the comunity and what we can do for each other. This knowledge in time will become very important to the lives of the community.
+          .footer__box--middle
+            .footer__items--middle
+              img.jpic(src='./src/img/flag-map-south-africa.jpg', alt='Craig')
+              .footer__text.footer__text--middle Local is lekker !
+          .footer__box--right
+            .footer__items--right
+              .footer__text.footer__items--right--one
+                | Connect with fellow locals
+                br
+                                              info@adlocal.co.za
+                br
+              .footer__text.footer__items--right--two
+                strong Starting with:
+                br
+                                              Westdene.
+                br
+                |  
+                                              Sophiatown
+                br
+              .footer__icon.row.social.footer__items--right--three
+                h2.footer__header--sub Designed, built and run by:
+                a(target='blank', href='https://netsecurity.co.za')
+                  img.netsec__icon(src='./src/img/netsec-logo-sm.png', alt='For honey')
+      .linkblock
+        .linkblock__item
+          a(href='https://4that.co.za/', target='_blank')
+            img.linkblock__item--photi(src='https://zenergy.site/storage/linkblock/4that-logo-150-1x.png', alt='4That trading')
+          h3.linkblock__heading 4that
+          .linkblock__list
+            ul
+              li Trading: this &quot;4 That&quot;
+              li Location specific trading
+              li Trade food grown at home
+              li Eat/Grow local: save energy
+        .linkblock__item
+          a(href='https://adlocal.co.za/', target='_blank')
+            img.linkblock__item--photi(src='https://zenergy.site/storage/linkblock/adlocal-logo-300-2x.png', alt='Local advertising')
+          h3.linkblock__heading AdLocal
+          .linkblock__list
+            ul
+              li Advertise locally
+              li Save petrol
+              li Know your neighbour
+              li Local is lekker
+        .linkblock__item
+          a(href='https://activeoxygen.co.za/', target='_blank')
+            img.linkblock__item--photi(src='https://zenergy.site/storage/linkblock/ao-logo-300-2x.png', alt='Active Oxygen')
+          h3.linkblock__heading
+            | Active O
+            sup 2
+          .linkblock__list
+            ul
+              li Ozone treatment solutions
+              li Sterilizing with Ozone
+              li Ozone saunas (local manufacture)
+              li Healthcare and curing ailments
+        .linkblock__item
+          a(href='https://microfarming.co.za/', target='_blank')
+            img.linkblock__item--photi(src='https://zenergy.site/storage/linkblock/mic-logo-300-2x.png', alt='Microfarming')
+          h3.linkblock__heading Mircrofarming
+          .linkblock__list
+            ul
+              li Grow aquaponically
+              li Microgreen growing
+              li Organic growing and cultivation
+              li Fish sales for aquaponics
+        .linkblock__item
+          a(href='https://netsecurity.co.za/', target='_blank')
+            img.linkblock__item--photi(src='https://zenergy.site/storage/linkblock/netsec-logo-300-2x.png', alt='Networks and IT')
+          h3.linkblock__heading Netsecurity
+          .linkblock__list
+            ul
+              li Website development &amp; hosting
+              li Internet connectivity &amp; security
+              li Hosting and mail systems
+              li Wifi and networks
+        .linkblock__item
+          a(href='https://wildflowehoney.co.za/', target='_blank')
+            img.linkblock__item--photi(src='https://zenergy.site/storage/linkblock/wfh-logo-300-2x.png', alt='Raw honey')
+          h3.linkblock__heading Wildflower Honey
+          .linkblock__list
+            ul
+              li Unadulterated honey
+              li Creamed honey
+              li Honeycombe
+              li Locally farmed
+        .linkblock__item
+          a(href='https://streetcraft.co.za/', target='_blank')
+            img.linkblock__item--photi(src='https://zenergy.site/storage/linkblock//scraft-logo-300-2x.png', alt='Street Crafters market')
+          h3.linkblock__heading Street Craft
+          .linkblock__list
+            ul
+              li Local to you registry
+              li Crafted by skilled hands
+              li Eeking out an existance
+              li Brandt of a failed state
+        .linkblock__item
+          a(href='https://springklersforafrica.co.za/', target='_blank')
+            img.linkblock__item--photi(src='https://zenergy.site/storage/linkblock/sfa-logo-300-2x.png', alt='Sprinklers for Africa')
+          h3.linkblock__heading Sprinklers 4 Africa
+          .linkblock__list
+            ul
+              li Borehole pump establishment
+              li Borehole pump fiment
+              li Spikes and water location
+              li Water filtration &amp; reclamation

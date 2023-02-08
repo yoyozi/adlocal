@@ -8,12 +8,9 @@
 
     color: white;
 
-
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-
-
-    
+  
     &__logo {
         grid-column: 1 / 2;
         width: 5rem;
@@ -53,11 +50,11 @@
     //     border-radius: 50%;
     // }
 
-    &__other {
+    &__area {
         grid-column: 5 / 6;
     }
 
-    &__visitstoday {
+    &__login {
         grid-column: 6 / 7;
     }
 }

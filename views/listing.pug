@@ -1,0 +1,17 @@
+extends base
+
+block content
+
+  section.listing 
+    .listing__paginator  &Larr; [ A B C D E ] &Rarr;
+
+    each company in companies
+   
+      .box
+        img.box__right--img(src='https://zenergy.site/storage/linkblock/4that-logo-300-2x.png', alt=`${company.name}`)
+        .box__ad
+          h3.box__left--company= company.name 
+          a.box__left--btn-sml(href=`/company/${company.slug}`) More
+          p.box__left--location= company.address
+          p.box__left--text= `${company.shortDescription} - ${company.longDescription}`
+

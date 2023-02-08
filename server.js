@@ -5,6 +5,13 @@ dotenv.config({ path: './config.env' });
 
 const app = require('./app');
 
+// Handling uncaughtExceptions
+process.on('uncaughtException', err => {
+  console.log(err.name, err.message)
+  console.log('UNCAUGHT EXCEPTION, Shutting down server');
+  process.exit(1);
+});
+
 // to see the env variables
 //console.log(process.env);
 
@@ -15,41 +22,33 @@ mongoose.set('strictQuery', false);
 const Connect = async () => {
   const url = process.env.DB_URL;
 
-  try {
-    await mongoose.connect(url, {
-      authSource: process.env.DB_AUTHSOURCE,
-      user: process.env.DB_USERNAME,
-      pass: process.env.DB_PASSWORD,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+  await mongoose.connect(url, {
+    authSource: process.env.DB_AUTHSOURCE,
+    user: process.env.DB_USERNAME,
+    pass: process.env.DB_PASSWORD,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 
-    console.log('Database is connected!');
-  } catch (error) {
-    console.log(error.stack);
-    process.exit(1);
-  }
+  console.log('Database is connected!');
 };
 Connect();
-
-// const newCompany = new Company({
-//   name: "The swamp thing",
-//   address: "23 Thornton Road",
-//   contact: "John solo",
-//   mobile: "0618090565",
-//   email: "sales@bumminess",
-// });
-// newCompany
-//   .save()
-//   .then((doc) => {
-//     console.log(doc);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);
 });
+
+// Handling unhandledPromiss rejections i.e. bd connection failure
+// process.on('UnhandledPromiseRejectionWarning')
+process.on('unhandledRejection', err => {
+  console.log(err.name, err.message);
+  console.log('UNHANDLED REJECTION, Shutting down server');
+  // Let all connections close and then exit
+  server.close(() => {
+    process.exit(1);
+  });
+});
+
+// Handling uncaughtExceptions taken to top of code so catches all uncaught exceptions

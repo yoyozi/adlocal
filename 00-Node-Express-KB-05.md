@@ -3401,7 +3401,7 @@ This we can change as it would be best to send back to the client that the **id 
 In dev environment we dont care as we can see what error is, in production we use the "CastError" name in the error to isolate and change the outcome. We first make a copy of the error and then apply a function to it.
 
 ```
-odule.exports = (err, req, res, next) => {
+module.exports = (err, req, res, next) => {
   //console.log(err.stack);
 
   err.statusCode = err.statusCode || 500;
@@ -6158,7 +6158,7 @@ doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+*        meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Natours #{tour}
         link(rel='stylesheet' href='css/stylsheet')
@@ -6212,13 +6212,13 @@ html(lang='en')
         include _header
 
         // CONTENT
-        section.verview
+        section.overview
             h1= tour
 
         // FOOTER
         include _footer
 
-// header.pug
+// _header.pug
 header.header
     nav.nav.nav--tours
         a.nav__el(href='#') All tours
@@ -6232,7 +6232,7 @@ header.header
         button.nav__el Log in
         button.nav__el.nav__el--cta Sign up
 
-// footer.pug
+// _footer.pug
 footer.footer
     .footer__logo
         img(src='img/logo-green.png' alt='Natours logo')

@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa180",
+    "name": "Craig",
+    "phone": "0637317733",
+    "email": "craig@yoyozi.com",
+    "photo": "default.jpg",
+    "role": "admin",
+    "password": "password",
+    "passwordConfirm": "password"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa181",
+    "name": "Tanya",
+    "phone": "0824526470",
+    "email": "tanyac1976@gmail.com",
+    "photo": "default.jpg",
+    "role": "user",
+    "password": "password",
+    "passwordConfirm": "password"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa182",
+    "name": "Richenda Holland",
+    "phone": "0114700078",
+    "email": "info@skkinstallations.co.za",
+    "photo": "default.jpg",
+    "role": "user",
+    "password": "password",
+    "passwordConfirm": "password"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa183",
+    "name": "Sharon",
+    "phone": "0718224890",
+    "email": "email@email.com",
+    "photo": "default.jpg",
+    "role": "user",
+    "password": "password",
+    "passwordConfirm": "password"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa184",
+    "name": "Beatrice and Justine",
+    "phone": "0780475988",
+    "email": "email@email.com",
+    "photo": "default.jpg",
+    "role": "user",
+    "password": "password",
+    "passwordConfirm": "password"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa185",
+    "name": "Shannon",
+    "phone": "0621820177",
+    "email": "sales@bgtacticalstore.com",
+    "photo": "default.jpg",
+    "role": "user",
+    "password": "password",
+    "passwordConfirm": "password"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa186",
+    "name": "Nozuko",
+    "phone": "0833472344",
+    "email": "email@email.com",
+    "photo": "default.jpg",
+    "role": "user",
+    "password": "password",
+    "passwordConfirm": "password"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa187",
+    "name":"Ezra",
+    "phone":"0789419072",
+    "email":"gpsdrivingschoool@gmail.com",
+    "photo": "default.jpg",
+    "role": "user",
+    "password": "password",
+    "passwordConfirm": "password"
+  },
+  {
+    "_id": "5c8a1dfa2f8fb814b56fa188",
+    "name":"Blaze",
+    "phone":"0618090873",
+    "email":"email@email.com",
+    "photo": "default.jpg",
+    "role": "user",
+    "password": "password",
+    "passwordConfirm": "password"
+  }
+]

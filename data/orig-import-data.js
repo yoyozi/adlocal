@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const fs = require('fs');
 const Company = require('../models/companyModel');
+const User = require('../models/userModel');
 
 dotenv.config({ path: './config.env' });
 
@@ -25,6 +26,7 @@ const Connect = async () => {
 };
 Connect();
 
+// COMPANIES
 // Read the JSON file in
 const companies = JSON.parse(
   fs.readFileSync(`${__dirname}/companies.json`, 'utf-8')

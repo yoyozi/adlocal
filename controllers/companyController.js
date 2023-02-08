@@ -1,89 +1,102 @@
 const Company = require('../models/companyModel');
-const APIFeatures = require('../utils/apiFeatures');
-const AppError = require('../utils/appError');
-const catchAsync = require('../utils/catchAsync');
+const factory = require('./handlerFactory');
 
-// Route handlers
-exports.getAllCompanies = catchAsync(async (req, res) => {
+//const AppError = require('../utils/appError');
+//const catchAsync = require('../utils/catchAsync');
 
-    // EXECUTE QUERY
-    const features = new APIFeatures(Company.find(), req.query)
-      .filter()
-      .sort()
-      .limitFields()
-      .paginate();
-    const companies = await features.query;
+// Factory handlers
+exports.deleteCompany = factory.deleteOne(Company);
+exports.updateCompany = factory.updateOne(Company);
+exports.createCompany = factory.createOne(Company);
+exports.getCompany = factory.getOne(Company);
+exports.getAllCompanies = factory.getAll(Company);
 
-    res.status(200).json({
-      status: 'success',
-      requestedAt: req.requestedTime,
-      results: companies.length,
-      data: {
-        companies,
-      },
-    });
-});
+// // Route handlers
+// exports.getAllCompanies = catchAsync(async (req, res) => {
 
-exports.getCompany = catchAsync(async (req, res, next) => {
+//     // EXECUTE QUERY
+//     const features = new APIFeatures(Company.find(), req.query)
+//       .filter()
+//       .sort()
+//       .limitFields()
+//       .paginate();
+//     const companies = await features.query;
 
-  const company = await Company.findById(req.params.id);
+//     res.status(200).json({
+//       status: 'success',
+//       requestedAt: req.requestedTime,
+//       results: companies.length,
+//       data: {
+//         companies,
+//       },
+//     });
+// });
 
-  if(!company) {
-    // Must use a return as we dont want the next to continue after this function , 
-    // sends to err and globalErrorHandler
-    return next(new AppError('No company found with that ID', 404)) 
-  };
+// exports.getCompany = catchAsync(async (req, res, next) => {
 
-  res.status(200).json({
-    status: 'success',
-    data: {
-      company,
-    },
-  });
-});
+//   const company = await Company.findById(req.params.id);
 
-exports.createCompany = catchAsync(async (req, res) => {
-  const newCompany = await Company.create(req.body);
+//   // below is with a populate if not done as Middleware and only on a 
+//   // route handler see model for pre middleware where its done for all
+//   // const company = await Company.findById(req.params.id).populate({
+//   //   path: 'contact',
+//   //   select: '-__v -passwordChangedAt'
+//   // });
 
-  res.status(201).json({
-    status: 'success',
-    data: {
-      company: newCompany,
-    },
-  });
-});
+//   if(!company) {
+//     // Must use a return as we dont want the next to continue after this function , 
+//     // sends to err and globalErrorHandler
+//     return next(new AppError('No company found with that ID', 404)) 
+//   };
 
-exports.deleteCompany = catchAsync(async (req, res, next) => {
+//   res.status(200).json({
+//     status: 'success',
+//     data: {
+//       company,
+//     },
+//   });
+// });
 
-  if(!company) {
-    // Must use a return as we dont want the next to continue after this function , 
-    // sends to err and globalErrorHandler
-    return next(new AppError('No company found with that ID', 404)) 
-  };
+// exports.createCompany = catchAsync(async (req, res) => {
+//   const newCompany = await Company.create(req.body);
 
-  await Company.findByIdAndRemove(req.params.id);
-  res.status(204).json({
-    status: 'success',
-    data: null,
-  });
-});
+//   res.status(201).json({
+//     status: 'success',
+//     data: {
+//       company: newCompany,
+//     },
+//   });
+// });
+  
+// exports.deleteCompany = catchAsync(async (req, res, next) => {
+  
+//   const company = await Company.findByIdAndDelete(req.params.id);
 
-exports.updateCompany = catchAsync(async (req, res) => {
+//   if (!company) {
+//     return next(new AppError('No tour found with that ID', 404));
+//   }
 
-  if(!company) {
-    // Must use a return as we dont want the next to continue after this function , 
-    // sends to err and globalErrorHandler
-    return next(new AppError('No company found with that ID', 404)) 
-  };
+//   res.status(204).json({
+//     status: 'success',
+//     data: null
+//   });
+// });
 
-  const company = await Company.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-    runValidators: true,
-  });
-  res.status(200).json({
-    status: 'success',
-    data: {
-      company,
-    },
-  });
-});
+// exports.updateCompany = catchAsync(async (req, res, next) => {
+  
+//   const company = await Company.findByIdAndUpdate(req.params.id, req.body, {
+//     new: true,
+//     runValidators: true,
+//   });
+
+//   if(!company) {
+//     return next(new AppError('No company found with that ID', 404)) 
+//   }
+
+//   res.status(200).json({
+//     status: 'success',
+//     data: {
+//       company,
+//     },
+//   });
+// });

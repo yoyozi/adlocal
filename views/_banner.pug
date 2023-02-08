@@ -1,0 +1,34 @@
+section.banner
+  img.banner__logo(src='/img/adlocal-logo.png', alt='Advertize locally')
+  .tooltip.banner__feature
+    .banner__f.active
+      img.banner__marker(src='/svg/star-full.svg', alt='Feature-on-off')
+    p.tip_f.tip ADD/REMOVE FEATURE
+  .tooltip.banner__map
+    .banner__m.active
+      img.banner__marker(src='/svg/map-on.svg', alt='Map-on-off')
+    p.tip_m.tip ADD/REMOVE MAP
+  .tooltip.banner__speaker
+    .banner__sp
+      img.banner__marker(src='/svg/mega.svg', alt='Notices')
+    p.tip_sp.tip IMPORTANT NOTICES!
+  .notice-wrapper
+    .notice
+      .notice-close X
+      .notice-content
+        h1.heading-secondary IMPORTANT NOTICES!
+        h3.heading-secondary--sub For the area of Westdene and Triomph
+        p.paragraph
+          strong Security
+          | : Coming soon to the site
+        p.paragraph
+          strong Public Notices
+          | : Coming soon to the site
+        p.paragraph
+          strong Event Notices
+          | : Coming soon to the site
+  strong.banner__area Westdene/Triomph
+  if user
+    button.banner__login Log out
+  else
+    button.banner__login Log in

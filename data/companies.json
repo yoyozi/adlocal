@@ -1,105 +1,137 @@
 [
   {
-    "name":"Dirty Doggie",
+    "name":"Netsecurity",
+    "contact": "5c8a1dfa2f8fb814b56fa180",
     "address":"25 Thornton road",
-    "contact":"Tanya",
-    "mobile":"0824526470",
-    "email":"tanyac1976@gmail.com",
+    "website":"https://netsecurity.co.za",
+    "shortDescription":"Websites and networks",
+    "longDescription":"The one stop service provider. Proven Internet conections, WiFi and network solutions, web design, application development. Single board designs, Raspberry Pie and Arduino.",
+    "logo":"netsecurity-logo.jpg",
+    "image":"netsecurity-image.jpg",
+    "createdAt":"18 jan 2022",
+    "location": {
+      "type": "Point",
+      "coordinates": [27.98983861858946, -26.176691793209443]
+    }
+  },
+  {
+    "name":"Dirty Doggie",
+    "contact": "5c8a1dfa2f8fb814b56fa181",
+    "address":"25 Thornton road",
     "website":"https://www.facebook.com/DirtyDoggie",
     "shortDescription":"Renowned Dog Parlour",
     "longDescription":"Dirty Doggie takes care of your pet as if it was our own. The greatest of care is taken to ensure your dog is well groomed and looked after",
     "logo":"dirtydoggie-logo.jpg",
     "image":"dirtydoggie-image.jpg",
-    "createdAt":"18 jan 2022"
+    "createdAt":"18 jan 2022",
+    "location": {
+      "type": "Point",
+      "coordinates": [27.98753153791114,-26.1787062144584]
+    }
   },
   {
     "name": "SKK Installations",
+    "contact": "5c8a1dfa2f8fb814b56fa182",
     "address": "26 Thornton road",
-    "contact": "Richenda Holland",
-    "mobile": "0114700078",
-    "email":" info@skkinstallations.co.za",
     "website":" http://skkinstallations.co.za",
     "shortDescription": "DRIVEN BY PASSION",
     "longDescription": "Tailored construction solution focused in interior finishing, space planning, project management and acoustic installation.",
     "logo":"skkinstallations-logo.jpg",
     "image":"skkinstallations-image.jpg",
-    "createdAt":"1 sep 2022"
+    "createdAt":"1 sep 2022",
+    "location": {
+      "type": "Point",
+      "coordinates": [27.98775160864099, -26.178814837428156]
+    }
   },
   {
     "name": "Hairshades",
+    "contact": "5c8a1dfa2f8fb814b56fa183",
     "address": "50 Thornton road",
-    "contact": "Sharon",
-    "mobile": "0718224890",
-    "email":"",
     "website":"",
     "shortDescription": "Fair rates - Hair sallon",
     "longDescription": "We do male, female and childrens cuts",
     "logo":"hairshades-logo.jpg",
     "image":"hairshades-image.jpg",
-    "createdAt": "29 Oct 2022" 
-},
-{
+    "createdAt": "29 Oct 2022",
+    "location": {
+      "type": "Point",
+      "coordinates": [27.98638722597221, -26.178063924097927]
+    } 
+  },
+  {
     "name": "Kijans laundry and tailoring",
+    "contact": "5c8a1dfa2f8fb814b56fa184",
     "address": "51 Thornton road",
-    "contact": "Beatrice and Justine",
-    "mobile": "0780475988",
-    "email":"",
     "website":"",
     "shortDescription": "Laundry and tailoring service",
     "longDescription": "For custom tailoring and expert laundry services",
     "logo":"kijanslaundryandtailoring-logo.jpg",
     "image":"kijanslaundryandtailoring-image.jpg",
-    "createdAt": "24 Nov 2022"
+    "createdAt": "24 Nov 2022",
+    "location": {
+      "type": "Point",
+      "coordinates": [27.986244261517072, -26.177981871607585]
+    }
   },
   {
     "name":"BG Tactical Store",
+    "contact": "5c8a1dfa2f8fb814b56fa185",
     "address":"19 Thornton road",
-    "contact":"Shannon",
-    "mobile":"0621820177",
-    "email":"sales@bgtacticalstore.com",
     "website":"https://bgtacticalstore.com",
     "shortDescription":"Self Defence Products",
     "longDescription":"Blank handguns and rifles, pepper sprays, BP Jackets etc.",
     "logo":"bgtacticalstore-logo.jpg",
     "image":"bgtacticalstore-image.jpg",
-    "createdAt": "3 Mar 2022"
+    "createdAt": "3 Mar 2022",
+    "location": {
+      "type": "Point",
+      "coordinates": [27.98655301450775, -26.177820616707816]
+    }
   },
 
   {
     "name":"Nhantsike",
+    "contact": "5c8a1dfa2f8fb814b56fa186",
     "address":"47 3rd Avenue",
-    "contact":"Nozuko",
-    "mobile":"0833472344",
-    "email":"",
     "website":"",
     "shortDescription":"Clothing Alterations",
     "longDescription":"Resizing & hemming of shirts, jackets, trousers, curtains, dresses and linen",
     "logo":"nhantsike-logo.jpg",
-    "createdAt": "22 Sep 2021"
+    "createdAt": "22 Sep 2021",
+    "location": {
+      "type": "Point",
+      "coordinates": [27.985408787878, -26.1772527878787]
+    }
   },
   {
     "name":"GPS Driving School",
+    "contact": "5c8a1dfa2f8fb814b56fa187",
     "address":"26 Thornton Road",
-    "contact":"Ezra",
-    "mobile":"0789419072",
-    "email":"gpsdrivingschoool@gmail.com",
     "website":"https://gpsdrivingschool.co.za/",
     "shortDescription":"Learn your way.",
     "longDescription":"Our vision as a driving school is to ensure all our learner drivers can learn at an affordable price while receiving the best quality service.",
     "logo":"gpsdrivingschool-logo.jpg",
-    "createdAt": "21 February 2022"
+    "createdAt": "21 February 2022",
+    "location": {
+      "type": "Point",
+      "coordinates": [27.987594458997567, -26.178649057133587]
+    }
   },
   {
     "name":"The Corners Cafe",
+    "contact": "5c8a1dfa2f8fb814b56fa188",
     "address":"19 Thornton Road",
-    "contact":"Blaze",
-    "mobile":"0618090873",
-    "email":"sales@bussiness",
     "website":"",
     "shortDescription":"Affordable family food",
     "longDescription":"Enjoy the easyoing atmosphere and vibe at Corners. Catering for locals.",
     "logo":"thecornerscafe-logo.jpg",
     "image":"thecornerscafe-image.jpg",
-    "createdAt": "9 Feb 2022"
+    "createdAt": "9 Feb 2022",
+    "location": {
+      "type": "Point",
+      "coordinates": [27.986571386090716,
+      -26.177925005706424]
+    }
   }
 ]
